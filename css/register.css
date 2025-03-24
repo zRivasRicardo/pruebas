@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+
+.custom-alert {
+    position: fixed;
+    top: 20px; /* Distancia desde la parte superior de la ventana */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el mensaje horizontalmente */
+    background-color: #467385;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    z-index: 9999;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.5s ease-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50%) translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+.custom-alert .close {
+    margin-left: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.custom-alert .close:hover {
+    transform: rotate(90deg);
+}
+
+.custom-alert.success {
+    background-color: #5f7c8d;
+}
+
+.custom-alert.error {
+    background-color: #f44336;
+}
+
+.custom-alert.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30px);
+    pointer-events: none;
+}
+
+/* Reset de margenes y padding */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9e9e9;
+    background-image: url("https://img.freepik.com/foto-gratis/patron-venas-hojas-macro-verde-vibrante-generada-ia_188544-42396.jpg?t=st=1742488121~exp=1742491721~hmac=183ce19eaa3c9787d8b4f92e92499e8880ffd3b93077ec69b85e4dc73f3f17cd&w=1060");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: transparent;
+    padding: 15px 0;
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, rgba(41, 41, 41, 0.2), rgba(0, 0, 0, 0.5));
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center; /* Asegura que el icono y el texto estén alineados */
+    gap: 10px; /* Espacio entre el icono y el texto */
+}
+
+.navbar .navbar-brand img {
+    width: 200px; /* Ajusta el tamaño del logo */
+    height: 40px;
+    object-fit: contain; /* Mantiene el logo en su aspecto original */
+}
+
+.navbar .navbar-brand svg {
+    width: 100px; 
+    height: 40px; 
+    fill: white; 
+}
+
+/* Contenedor principal */
+#contenedor-login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* Contenedor del formulario */
+.login-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    width: 430px;
+    height: auto;
+    max-height: 500px;
+    margin-top: -200px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos */
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Etiquetas */
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+}
+
+/* Campos de entrada */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+/* Contenedor de botones */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    background-color: #999999;
+}
+
+#login-btn {
+    background-color: #c0c0c0;
+}
+
+/* Enlace de inicio de sesión */
+#signup-btn {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#signup-btn:hover {
+    text-decoration: underline;
+}
+
+/* Texto de bienvenida */
+#bienvenido {
+    position: absolute;
+    left: 300px;
+    margin-left: 40px;
+    margin-top: -10%;
+    color: white;
+    text-align: left;
+    z-index: 500;
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 8px 8px 15px rgba(0, 0, 0, 1),
+                 3px 3px 8px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+#bienvenido:hover {
+    text-shadow: 12px 12px 25px rgba(0, 0, 0, 1),
+                 5px 5px 10px rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+}
+
+/* Ocultar el texto en pantallas pequeñas */
+@media (max-width: 768px) {
+    #bienvenido {
+        display: none;
+    }
+}

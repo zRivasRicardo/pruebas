@@ -1,0 +1,226 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e9e9e9;
+    background-image: url("https://img.freepik.com/foto-gratis/patron-venas-hojas-macro-verde-vibrante-generada-ia_188544-42396.jpg?t=st=1742488121~exp=1742491721~hmac=183ce19eaa3c9787d8b4f92e92499e8880ffd3b93077ec69b85e4dc73f3f17cd&w=1060");
+    background-size: cover;
+    background-position: center center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar*/
+.navbar {
+    background-color: transparent; 
+    padding: 15px 0;
+    box-shadow: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(to right, rgba(41, 41, 41, 0.2), rgba(0, 0, 0, 0.5)); 
+    transition: background 0.3s ease;
+}
+
+.navbar .navbar-brand {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    width: 10%;
+    margin: 0 auto;
+    margin-right: 100%;
+    object-fit: contain;
+
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    z-index: -1;
+    transition: backdrop-filter 0.3s ease-in-out; 
+}
+
+body.blurred::before {
+    backdrop-filter: blur(5px); 
+}
+
+#contenedor-login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.login-container {
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7); 
+    width: 430px;
+    height: auto; 
+    max-height: 500px; 
+    margin-top: -180px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.login-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+}
+
+
+#bienvenido {
+    position: absolute;
+    left: 300px;
+    margin-left: 40px;
+    margin-top: -10%;
+    color: white;
+    text-align: left;
+    z-index: 500;
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-shadow: 8px 8px 15px rgba(0, 0, 0, 1),
+                 3px 3px 8px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+#bienvenido:hover {
+    text-shadow: 12px 12px 25px rgba(0, 0, 0, 1),
+                 5px 5px 10px rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #bienvenido {
+        display: none;
+    }
+}
+
+/* Botones de acción */
+.button-container {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 20px;
+}
+
+button {
+    width: 48%; 
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #000; 
+    transition: background-color 0.3s ease;
+}
+
+#login-btn, #signup-btn {
+    background-color: #c0c0c0; 
+}
+
+button:hover {
+    opacity: 0.9; 
+    background-color: #999999; 
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f1f1f1; 
+    color: #000; 
+}
+
+input:focus {
+    border-color: #132d49;
+    outline: none;
+}
+
+.button-entrar {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center; 
+    margin-top: 10%;
+}
+
+.form-check {
+    padding: 0px;
+    display: flex;
+}
+
+.form-check-input {
+    margin-left: -22%;
+}
+
+#login-btn {
+    border-radius: 5px;
+}
+
+#login-btn:hover {
+    background-color: #333333;
+}
+
+.alert {
+    position: fixed; 
+    top: 65%;        
+    left: 50%;        
+    transform: translateX(-50%);  
+    z-index: 1050;   
+    margin-top: 0;    
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;  
+    max-width: 500px; /
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
